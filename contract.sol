@@ -3,10 +3,10 @@ pragma experimental ABIEncoderV2;
 
 contract agricultureContract {
 
-    uint8 numberOfProducts; // 총 제품의 수입니다.
-    address contractOwner;
+    uint8 numberOfProducts; //unit:양수. 총 제품의 수입니다.
+    address contractOwner; //address: 전자지갑 주소를 저장하는 데이터 타입
 
-    struct myStruct {
+    struct myStruct { //struct : 구조체
         uint   number;
         string productName;
         string location;
@@ -16,7 +16,7 @@ contract agricultureContract {
     myStruct[] public productes;
 
     constructor() public {        
-        contractOwner = msg.sender;
+        contractOwner = msg.sender; //smartcontract을 배포한 사람의 지갑 주소
     }
 
     function addProStru (uint _initNumber, string _firstString, string _secondString) public {

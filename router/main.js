@@ -2,9 +2,9 @@
 const Tx = require('ethereumjs-tx').Transaction
 const Web3 = require('web3')
 const abi = require('../public/js/contractabi.json')
-const web3 = new Web3('https://ropsten.infura.io/v3/')
+const web3 = new Web3('https://ropsten.infura.io/v3/3c52917848e945229c0d33d632b10490')
 
-const account = ''
+const account = '0xd1CB68c9Df7c94b064a48598859Da807ac1B6D35'
 
 // const account = web3.eth.accounts[0];
 // console('account : ' + account);
@@ -13,8 +13,8 @@ const account = ''
 //         console.log('getBalance:' + balance);
 // }
 
-const privateKey = Buffer.from('', 'hex')
-const contractAddress = '0x6e33bd4718812744414f8ff692f78ccea7f1cb1f'
+const privateKey = Buffer.from('0x1d137da272398267596fb9b7d643afc51fbc7d0c3439dcf9fce4d4c229cc4b84', 'hex')
+const contractAddress = '0xd8c2e49Fc3A937Bbe62b34a7182A4867be69eB22'
 const contract = new web3.eth.Contract(abi, contractAddress)
 
 const bodyParser = require('body-parser')
